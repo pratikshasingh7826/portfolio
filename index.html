@@ -294,38 +294,509 @@
             }
 
             /* ---------------------- CONTACT SECTION ----------------------- */
+
+            ```css
+            /* ---------------------- CONTACT SECTION ----------------------- */
+
             .contact-section {
-                padding: 80px 20px;
-                background-color: white;
-                text-align: center;
+                padding: 100px 8%;
+                background-color: beige;
+                position: relative;
+                overflow: hidden;
             }
 
-            .contact-section h1 {
-                font-size: 2.5rem;
-                margin-bottom: 20px;
+
+            /* Decorative circles */
+
+            .contact-section::before {
+                content: "";
+                position: absolute;
+                width: 280px;
+                height: 280px;
+                border-radius: 50%;
+                background-color: rgba(139, 69, 19, 0.07);
+                top: -120px;
+                left: -100px;
+            }
+
+            .contact-section::after {
+                content: "";
+                position: absolute;
+                width: 220px;
+                height: 220px;
+                border-radius: 50%;
+                background-color: rgba(139, 69, 19, 0.06);
+                bottom: -100px;
+                right: -80px;
+            }
+
+
+            /* Main container */
+
+            .contact-container {
+                max-width: 1100px;
+                margin: auto;
+
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 70px;
+
+                align-items: center;
+                position: relative;
+                z-index: 2;
+            }
+
+
+            /* ---------------- LEFT SIDE ---------------- */
+
+            .contact-info {
+                text-align: left;
+            }
+
+            .contact-label {
+                display: inline-block;
+
+                font-size: 1rem;
+                font-weight: 600;
+                letter-spacing: 4px;
+
+                color: brown;
+
+                margin-bottom: 12px;
+            }
+
+            .contact-info h1 {
+                font-size: 3.2rem;
                 color: #3d3024;
+                margin-bottom: 20px;
             }
 
-            .lines {
-                font-size: 1.5rem;
-                color: #615245;
+            .contact-description {
+                max-width: 520px;
+
+                font-size: 1.15rem;
+                line-height: 1.8;
+
+                color: #625548;
             }
 
-            .email {
-                margin-top: 20px;
+
+            .contact-line {
+                width: 70px;
+                height: 4px;
+
+                background-color: brown;
+                border-radius: 10px;
+
+                margin: 30px 0;
+            }
+
+
+            /* Quote */
+
+            .contact-message {
+                display: flex;
+                align-items: flex-start;
+
+                gap: 12px;
+
+                max-width: 450px;
+            }
+
+            .quote-mark {
+                font-size: 4rem;
+                line-height: 0.7;
+
+                color: brown;
+                font-family: Georgia, serif;
+            }
+
+            .contact-message p {
+                font-size: 1rem;
+                line-height: 1.7;
+                font-style: italic;
+
+                color: #6c5b4d;
+            }
+
+
+            /* ---------------- RIGHT SIDE ---------------- */
+
+            .contact-card {
+                background-color: #fff7d1;
+
+                padding: 40px;
+
+                border-radius: 25px;
+
+                box-shadow:
+                    0 15px 35px rgba(0, 0, 0, 0.15);
+
+                border: 1px solid rgba(139, 69, 19, 0.12);
+
+                transition: 0.4s ease;
+            }
+
+            .contact-card:hover {
+                transform: translateY(-7px);
+
+                box-shadow:
+                    0 20px 45px rgba(0, 0, 0, 0.22);
+            }
+
+
+            /* Mail heading */
+
+            .mail-heading {
+                display: flex;
+                align-items: center;
+
+                gap: 18px;
+
+                margin-bottom: 30px;
+            }
+
+            .mail-icon {
+                width: 55px;
+                height: 55px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background-color: brown;
+                color: white;
+
+                border-radius: 16px;
+
+                font-size: 24px;
+
+                box-shadow: 0 8px 15px rgba(139, 69, 19, 0.2);
+            }
+
+            .mail-heading h2 {
                 font-size: 1.5rem;
-                color: #352d25;
+                color: #3d3024;
+
+                margin-bottom: 3px;
+            }
+
+            .mail-heading p {
+                font-size: 0.85rem;
+                color: #817365;
+            }
+
+
+            /* Email options */
+
+            .email-options {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+
+            /* Individual email */
+
+            .email-option {
+                display: flex;
+                align-items: center;
+
+                gap: 15px;
+
+                padding: 18px;
+
+                background-color: white;
+
+                border-radius: 15px;
+
                 text-decoration: none;
+
+                border: 1px solid transparent;
+
+                transition: 0.3s ease;
             }
 
-            .email:hover {
-                font-size: 1.6rem;
-                transition: 1s ease;
-                color: #241e19;
+            .email-option:hover {
+                border-color: brown;
+
+                transform: translateX(6px);
+
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             }
 
 
+            /* Email icon */
 
+            .email-option-icon {
+                width: 45px;
+                height: 45px;
+
+                min-width: 45px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                border-radius: 12px;
+
+                background-color: beige;
+
+                color: brown;
+
+                font-size: 19px;
+            }
+
+
+            /* Email text */
+
+            .email-text {
+                flex: 1;
+
+                display: flex;
+                flex-direction: column;
+
+                gap: 4px;
+            }
+
+            .email-text span {
+                font-size: 0.7rem;
+
+                text-transform: uppercase;
+
+                letter-spacing: 1.5px;
+
+                color: #948477;
+            }
+
+            .email-text strong {
+                font-size: 0.95rem;
+
+                font-weight: 500;
+
+                color: #352d25;
+
+                word-break: break-word;
+            }
+
+
+            /* Arrow */
+
+            .email-arrow {
+                font-size: 1.5rem;
+
+                color: brown;
+
+                transition: 0.3s ease;
+            }
+
+            .email-option:hover .email-arrow {
+                transform: translateX(5px);
+            }
+
+
+            /* Note */
+
+            .email-note {
+                text-align: center;
+
+                margin-top: 22px;
+
+                font-size: 0.75rem;
+
+                color: #938477;
+            }
+
+
+            /* ---------------------- CONTACT RESPONSIVE ----------------------- */
+
+            @media (max-width: 900px) {
+
+                .contact-container {
+                    grid-template-columns: 1fr;
+
+                    gap: 45px;
+
+                    max-width: 700px;
+                }
+
+                .contact-info {
+                    text-align: center;
+                }
+
+                .contact-description {
+                    margin: auto;
+                }
+
+                .contact-line {
+                    margin: 25px auto;
+                }
+
+                .contact-message {
+                    margin: auto;
+                    text-align: left;
+                }
+
+            }
+
+
+            @media (max-width: 600px) {
+
+                .contact-section {
+                    padding: 70px 20px;
+                }
+
+                .contact-info h1 {
+                    font-size: 2.3rem;
+                }
+
+                .contact-description {
+                    font-size: 1rem;
+                }
+
+                .contact-card {
+                    padding: 25px 18px;
+
+                    border-radius: 20px;
+                }
+
+                .mail-heading {
+                    gap: 12px;
+                }
+
+                .mail-icon {
+                    width: 48px;
+                    height: 48px;
+                    min-width: 48px;
+
+                    font-size: 20px;
+                }
+
+                .mail-heading h2 {
+                    font-size: 1.25rem;
+                }
+
+                .mail-heading p {
+                    font-size: 0.75rem;
+                }
+
+                .email-option {
+                    padding: 14px 12px;
+                    gap: 10px;
+                }
+
+                .email-option-icon {
+                    width: 38px;
+                    height: 38px;
+                    min-width: 38px;
+
+                    font-size: 16px;
+                }
+
+                .email-text strong {
+                    font-size: 0.78rem;
+                }
+
+                .email-text span {
+                    font-size: 0.6rem;
+                }
+
+                .email-arrow {
+                    font-size: 1.2rem;
+                }
+
+                .contact-message p {
+                    font-size: 0.9rem;
+                }
+
+            }
+
+            ```
+            /* Email card */
+
+            .email-card {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                padding: 18px 20px;
+
+                background-color: white;
+                border: 1px solid rgba(139, 69, 19, 0.15);
+                border-radius: 15px;
+
+                text-decoration: none;
+                text-align: left;
+
+                transition: 0.3s ease;
+            }
+
+            .email-card:hover {
+                transform: translateY(-4px);
+                border-color: brown;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            }
+
+            /* Email icon */
+
+            .email-icon {
+                width: 45px;
+                height: 45px;
+                min-width: 45px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background-color: beige;
+                color: brown;
+
+                border-radius: 12px;
+                font-size: 20px;
+            }
+
+            /* Email text */
+
+            .email-content {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+            }
+
+            .email-content span {
+                font-size: 0.75rem;
+                color: #8a7c70;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .email-content strong {
+                font-size: 1rem;
+                font-weight: 500;
+                color: #352d25;
+                word-break: break-word;
+            }
+
+            /* Arrow */
+
+            .email-arrow {
+                font-size: 1.5rem;
+                color: brown;
+                transition: 0.3s ease;
+            }
+
+            .email-card:hover .email-arrow {
+                transform: translateX(5px);
+            }
+
+            /* Bottom note */
+
+            .contact-note {
+                margin-top: 25px;
+                font-size: 0.85rem;
+                color: #8a7c70;
+            }
 
             /* ---------------------- FOOTER ----------------------- */
             footer {
@@ -645,17 +1116,96 @@
         </section>
 
         <!-- CONTACT -->
-        <section id="Contact" class="contact-section">
-            <h1>Get In Touch</h1>
+        <!-- CONTACT -->
 
-            <div class="contact-box">
-                <p class="lines"><strong>Have a question or want to connect? Drop me a message and I’ll get back to you
-                        soon!</strong></p>
-                <a href="mailto:piyusingh903@gmail.com" class="email">
-                    <strong>✉ Email:</strong> piyusingh903@gmail.com
-                </a>
+        <section id="Contact" class="contact-section">
+
+            <div class="contact-container">
+
+                <!-- LEFT SIDE -->
+                <div class="contact-info">
+
+                    <span class="contact-label">CONTACT</span>
+
+                    <h1>Let's Connect</h1>
+
+                    <p class="contact-description">
+                        Whether you have a question, want to discuss an idea,
+                        or simply wish to get in touch, I would be happy to hear from you.
+                    </p>
+
+                    <div class="contact-line"></div>
+
+                    <div class="contact-message">
+                        <span class="quote-mark">“</span>
+                        <p>
+                            Every meaningful connection begins with a simple conversation.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE -->
+                <div class="contact-card">
+
+                    <div class="mail-heading">
+                        <div class="mail-icon">✉</div>
+
+                        <div>
+                            <h2>Email Me</h2>
+                            <p>Choose an email address below</p>
+                        </div>
+                    </div>
+
+
+                    <div class="email-options">
+
+                        <a href="mailto:piyusingh903@gmail.com" class="email-option">
+
+                            <div class="email-option-icon">
+                                ✉
+                            </div>
+
+                            <div class="email-text">
+                                <span>Primary Email</span>
+                                <strong>piyusingh903@gmail.com</strong>
+                            </div>
+
+                            <div class="email-arrow">
+                                →
+                            </div>
+
+                        </a>
+
+
+                        <a href="mailto:singhnirmala163@gmail.com" class="email-option">
+
+                            <div class="email-option-icon">
+                                ✉
+                            </div>
+
+                            <div class="email-text">
+                                <span>Alternate Email</span>
+                                <strong>singhnirmala163@gmail.com</strong>
+                            </div>
+
+                            <div class="email-arrow">
+                                →
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <p class="email-note">
+                        Clicking an email address will open your default mail application.
+                    </p>
+
+                </div>
 
             </div>
+
         </section>
 
     </main>
